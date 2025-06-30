@@ -1,12 +1,73 @@
-## Hi there 👋
+# Project Title
 
-<!--
+A short description about the project and/or client.
 
-**Here are some ideas to get you started:**
+## Getting Started
 
-🙋‍♀️ A short introduction - what is your organization all about?
-🌈 Contribution guidelines - how can the community get involved?
-👩‍💻 Useful resources - where can the community find your docs? Is there anything else the community should know?
-🍿 Fun facts - what does your team eat for breakfast?
-🧙 Remember, you can do mighty things with the power of [Markdown](https://docs.github.com/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
--->
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+
+### Prerequisites
+
+The things you need before installing the software.
+
+* You need this
+* And you need this
+* Oh, and don't forget this
+
+### Installation
+
+A step by step guide that will tell you how to get the development environment up and running.
+
+```
+$ First step
+$ Another step
+$ Final step
+```
+
+## Usage
+
+A few examples of useful commands and/or tasks.
+
+```
+$ First example
+$ Second example
+$ And keep this in mind
+```
+
+## Deployment
+
+Additional notes on how to deploy this on a live or release system. Explaining the most important branches, what pipelines they trigger and how to update the database (if anything special).
+
+### Server
+
+* Live:
+* Release:
+* Development:
+
+### Branches
+
+* Master:
+* Feature:
+* Bugfix:
+* etc...
+
+## Additional Documentation and Acknowledgments
+
+* Project folder on server:
+* Confluence link:
+* Asana board:
+* etc...
+
+
+Built With
+This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
+
+Next
+React
+Vue
+Angular
+Svelte
+Laravel
+Bootstrap
+JQuery
+
