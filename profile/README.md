@@ -69,102 +69,45 @@ Creemos en la construcción de herramientas que no solo resuelvan problemas actu
 
 BYA se divide en **módulos interconectados**, cada uno diseñado para resolver una necesidad clave dentro de empresas modernas:
 
-### 1. BYA Core
-**ERP + CRM interno.**  
-El centro operativo que integra todas las plataformas y herramientas internas. Desde la administración comercial hasta módulos personalizados por área.
-
-- Gestión de usuarios y permisos  
-- Módulos internos por empresa o proyecto  
-- Paneles administrativos y de clientes  
-- Automatización de tareas operativas  
+### 🔹 Core
+**ERP modular del grupo.**  
+Core es la columna vertebral tecnológica de BYA. Integra diversos sistemas como CRM, administración, marketing, atención al cliente, gestión de usuarios y más. Diseñado desde cero para adaptarse a las operaciones del grupo, ofrece flexibilidad, escalabilidad y una interfaz modular que evoluciona junto con las necesidades del negocio.
 
 ---
 
-### 2. Spotter
-**Sistema inteligente de recolección y análisis de leads.**  
-Utiliza scraping, APIs externas y automatización para detectar oportunidades de venta segmentadas por zonas, giros o necesidades digitales.
-
-- Integración con Google Places  
-- Generación de base de datos de leads  
-- Filtro por zona, sector o presencia digital  
-- Exportación directa o conexión a CRMs  
+### 🔹 Academy
+**Plataforma LMS (Learning Management System).**  
+Academy está enfocada en la gestión de contenidos educativos, capacitación interna y formación de aliados externos. Permite estructurar cursos, administrar usuarios, evaluar progresos y generar reportes, todo desde una plataforma accesible y profesional.
 
 ---
 
-### 3. BYA Agents
-**Sistema de agentes de inteligencia artificial personalizados.**  
-Interfaces conversacionales con lógica de negocio integrada, diseñadas para resolver dudas, gestionar tareas y procesar información en tiempo real.
-
-- Agentes internos (documentación, soporte, dev)  
-- Agentes externos (soporte al cliente, ventas)  
-- Integración con bases de datos y herramientas del ecosistema  
+### 🔹 ByaSEF
+**Scraper especializado para plataformas de CONDUSEF.**  
+Esta herramienta automatiza la recolección de datos públicos desde los portales de CONDUSEF, los transforma en información estructurada y genera APIs internas listas para su consumo en el ecosistema. ByaSEF es clave para mantener actualizados nuestros registros y procesos financieros.
 
 ---
 
-### 4. Confíes Academy
-**Plataforma de educación digital financiera y empresarial.**  
-Entorno LMS (Learning Management System) que ofrece formación profesional a clientes, internos y aliados estratégicos.
-
-- Cursos en línea y exámenes  
-- Certificaciones internas  
-- Rutas de aprendizaje personalizadas  
-- Integración con CRM y Core  
+### 🔹 Keya
+**Sistema de autenticación y gestión de accesos.**  
+Keya es el núcleo de identidad digital dentro de BYA. Controla el inicio de sesión, permisos, roles, sesiones activas y políticas de seguridad de todos nuestros proyectos, ofreciendo una experiencia de usuario coherente y robusta, con foco en la protección de la información.
 
 ---
 
-### 5. Marketplace BYA
-**Tienda digital para servicios, productos y software.**  
-Un entorno de e-commerce inteligente donde los clientes pueden contratar soluciones digitales autogestionables.
-
-- Automatización de órdenes y pagos  
-- Venta de servicios de diseño, hosting, educación, software  
-- Vinculación con Confíes, Core y facturación  
+### 🔹 Spotter
+**Sistema de análisis geoespacial con Google Maps API.**  
+Spotter permite rastrear negocios y puntos de interés por zona, clasificar resultados y almacenar información relevante para procesos de generación de leads, análisis comercial y expansión territorial. Cuenta con una interfaz de consulta intuitiva y adaptable.
 
 ---
 
-### 6. Keya
-**Landing page builder + hosting interno.**  
-Una plataforma visual y personalizable para generar páginas empresariales, sin depender de herramientas externas.
-
-- Plantillas de alta conversión  
-- Integración directa con CRM, Spotter y Core  
-- Hosting administrado en servidores de BYA  
+### 🔹 Lumina
+**Inteligencia Artificial personalizada para operaciones internas.**  
+Lumina es nuestro asistente virtual entrenado con herramientas y datos del grupo. Apoya al equipo en tareas administrativas, análisis de datos, respuestas operativas, generación de documentación y más. Es una herramienta viva que aprende y se adapta continuamente.
 
 ---
 
-### 7. Lumina
-**Motor de campañas visuales y automatización de marketing.**  
-Sistema que permite crear y gestionar campañas con flujos automatizados, correos masivos y seguimiento de resultados.
-
-- Segmentación avanzada  
-- Integración con leads, clientes y CRM  
-- Dashboards de rendimiento  
-
----
-
-## 🧩 Tecnología que usamos
-
-Construimos con herramientas que nos permiten crecer de forma **modular, segura y escalable**:
-
-- **Frontend:** Next.js · TypeScript · Tailwind CSS  
-- **Backend:** Node.js · C# (.NET opcional) · Express  
-- **Base de datos:** PostgreSQL  
-- **Infraestructura:** Docker · AWS · GitHub  
-- **Automatización:** Automa · Zapier · Webhooks propios  
-- **IA y NLP:** OpenAI · Gemini · Integraciones API externas  
-
----
-
-## 🧬 Cultura de desarrollo
-
-En BYA, seguimos principios de ingeniería modernos y colaborativos:
-
-- Commits claros y documentados  
-- Revisión de código y merge controlado  
-- Deploys controlados con CI/CD  
-- Guías de estilo, documentación técnica y seguimiento en Notion  
-
-Usamos herramientas como **Slack**, **GitHub Projects** y **sprints semanales** para mantener alineados los objetivos de producto, diseño y desarrollo.
+### 🔹 Automate
+**Plataforma de automatización basada en n8n.**  
+Automate permite conectar múltiples servicios, ejecutar tareas programadas, coordinar flujos complejos y reducir la carga operativa de procesos repetitivos. Es el engranaje invisible que mantiene en marcha muchas operaciones del día a día.
 
 ---
 
