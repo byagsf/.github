@@ -63,6 +63,8 @@ Creemos en la construcción de herramientas que no solo resuelvan problemas actu
 - Porque priorizamos el largo plazo sobre las soluciones rápidas.  
 - Porque entendemos la tecnología como una extensión de la inteligencia humana.
 
+---
+
 ## 🌐 Estructura del Ecosistema BYA
 
 BYA se divide en **módulos interconectados**, cada uno diseñado para resolver una necesidad clave dentro de empresas modernas:
