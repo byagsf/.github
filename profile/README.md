@@ -18,7 +18,7 @@
 
 ## ¿Qué es BYA?
 
-BYA es una compañía de tecnología e innovación enfocada en diseñar soluciones inteligentes que transformen la forma en que las empresas operan, escalan y se comunican. Combinamos ingeniería, diseño y automatización para construir herramientas confiables, accesibles y preparadas para el futuro.
+BYA es una empresa tecnologica y de innovación enfocada en diseñar soluciones inteligentes que transformen la forma en que las empresas operan, escalan y se comunican. Combinamos ingeniería, diseño y automatización para construir herramientas confiables, accesibles y preparadas para el futuro.
 
 Este repositorio forma parte de nuestra infraestructura tecnológica interna, y ha sido diseñado para mantener la trazabilidad, documentación y evolución constante de nuestros proyectos clave.
 
