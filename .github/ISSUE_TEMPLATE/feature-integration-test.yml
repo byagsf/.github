@@ -1,0 +1,70 @@
+name: "🚀 Feature Integration"
+description: "Generic template for proposing and documenting new features."
+title: "[FEATURE]: "
+labels: ["feature", "integration"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 📌 Usage Guide
+        
+        > [!NOTE]
+        > Use this template to propose or document the integration of any new functionality into the system.
+        
+        > [!IMPORTANT]
+        > Before starting, ensure the idea is not already documented in another open issue. Avoid technical debt and duplication.
+
+        > [!TIP]
+        > Be as descriptive as possible. High-quality documentation today saves hours of debugging tomorrow.
+
+  - type: input
+    id: project_ref
+    attributes:
+      label: "🔗 Project Reference"
+      description: "Enter the module name or related Project ID."
+      placeholder: "e.g., Core-Module-01"
+    validations:
+      required: true
+
+  - type: textarea
+    id: overview
+    attributes:
+      label: "🎯 General Objective"
+      description: "Briefly describe what is expected to be achieved."
+      placeholder: "Placeholder text: The goal is to integrate X functionality to improve Y..."
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: "⚡ Estimated Priority"
+      description: "Select the urgency level for this integration."
+      options:
+        - "🔴 High (Blocker)"
+        - "🟡 Medium (Evolutionary)"
+        - "🟢 Low (Technical Improvement)"
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: prerequisites
+    attributes:
+      label: "📋 Requirements Checklist"
+      options:
+        - label: "Initial architecture review completed"
+        - label: "Backward compatibility verified"
+        - label: "Base documentation updated"
+
+  - type: textarea
+    id: ideas_notes
+    attributes:
+      label: "💡 Ideas and Additional Notes"
+      description: "Space for creative suggestions or implementation notes."
+      placeholder: "Idea: We could implement this using pattern Z to gain efficiency..."
+
+  - type: markdown
+    attributes:
+      value: |
+        ---
+        *This issue will be reviewed by the architecture team. Please keep comments focused on the technical solution.*
