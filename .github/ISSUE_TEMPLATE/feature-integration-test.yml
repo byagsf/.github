@@ -10,11 +10,20 @@ body:
       description: "You can modify these notes if this specific task requires different instructions."
       value: |
         > [!IMPORTANT]
-        > in this feature the most important task is the integration with Google Drive. the main point is the user must manage your Drive without go to the platform.
-        > this new feature is importat continue with the previous code, using code patterns, if you have some problem with the logic you can question of the correct team, example, if you have question about the documentation or maybe some test you can go with @carlosPadillaTorres for example.
-
+        >  TEXT HERE
+        
         > [!TIP]
-        > another thing is the correct comunication, each some time you must comunicate, you have two options, one: if you say the info in person you need to put that info in a new comment in parent issues, two: put directly the info in a new comment in parent issue.
+        > TEXT HERE
+        
+        > [!NOTE]
+        > TEXT HERE
+        
+        > [!WARNING]
+        > TEXT HERE
+        
+        > [!CAUTION]
+        > TEXT HERE
+        
     validations:
       required: true
 
