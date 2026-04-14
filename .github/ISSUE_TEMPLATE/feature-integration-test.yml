@@ -1,70 +1,64 @@
-name: "🚀 Feature Integration"
-description: "Generic template for proposing and documenting new features."
+name: "🚀 Flexible Feature Integration"
+description: "A fully customizable template where you can edit notes and add requirements."
 title: "[FEATURE]: "
-labels: ["feature", "integration"]
+labels: ["feature", "flexible-integration"]
 body:
-  - type: markdown
-    attributes:
-      value: |
-        ## 📌 Usage Guide
-        
-        > [!NOTE]
-        > Use this template to propose or document the integration of any new functionality into the system.
-        
-        > [!IMPORTANT]
-        > Before starting, ensure the idea is not already documented in another open issue. Avoid technical debt and duplication.
-
-        > [!TIP]
-        > Be as descriptive as possible. High-quality documentation today saves hours of debugging tomorrow.
-
-  - type: input
-    id: project_ref
-    attributes:
-      label: "🔗 Project Reference"
-      description: "Enter the module name or related Project ID."
-      placeholder: "e.g., Core-Module-01"
-    validations:
-      required: true
-
   - type: textarea
-    id: overview
+    id: dynamic_notes
     attributes:
-      label: "🎯 General Objective"
-      description: "Briefly describe what is expected to be achieved."
-      placeholder: "Placeholder text: The goal is to integrate X functionality to improve Y..."
+      label: "📝 Guidance & Warnings (Editable)"
+      description: "You can modify these notes if this specific task requires different instructions."
+      value: |
+        [NOTE]: Use this template to propose or document the integration of any new functionality.
+        
+        [IMPORTANT]: Before starting, ensure the idea is not already documented. Avoid technical debt.
+        
+        [TIP]: Be as descriptive as possible. Documentation saves time.
     validations:
       required: true
 
   - type: dropdown
     id: priority
     attributes:
-      label: "⚡ Estimated Priority"
-      description: "Select the urgency level for this integration."
+      label: "⚡ Urgency Level"
+      description: "Select one or choose 'Other' to specify a custom priority below."
       options:
         - "🔴 High (Blocker)"
         - "🟡 Medium (Evolutionary)"
         - "🟢 Low (Technical Improvement)"
+        - "🔘 Other (Specify in next field)"
     validations:
       required: true
 
-  - type: checkboxes
-    id: prerequisites
+  - type: input
+    id: custom_priority
     attributes:
-      label: "📋 Requirements Checklist"
+      label: "➕ Custom Priority (If 'Other' selected)"
+      placeholder: "e.g., 🟣 Critical Security Patch"
+
+  - type: checkboxes
+    id: standard_prerequisites
+    attributes:
+      label: "📋 Standard Requirements Checklist"
       options:
         - label: "Initial architecture review completed"
         - label: "Backward compatibility verified"
         - label: "Base documentation updated"
 
   - type: textarea
+    id: extra_requirements
+    attributes:
+      label: "🏗️ Additional & Custom Requirements"
+      description: "Add any other requirements or modify the ones above by typing them here."
+      placeholder: |
+        - [ ] New requirement 1
+        - [ ] Integration with specific API X
+        - [ ] Unit tests for module Y
+      value: |
+        - [ ] 
+
+  - type: textarea
     id: ideas_notes
     attributes:
-      label: "💡 Ideas and Additional Notes"
-      description: "Space for creative suggestions or implementation notes."
-      placeholder: "Idea: We could implement this using pattern Z to gain efficiency..."
-
-  - type: markdown
-    attributes:
-      value: |
-        ---
-        *This issue will be reviewed by the architecture team. Please keep comments focused on the technical solution.*
+      label: "💡 Creative Space / Notes"
+      description: "General notes or ideas for implementation."
