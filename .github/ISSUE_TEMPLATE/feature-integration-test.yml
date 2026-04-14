@@ -46,27 +46,31 @@ body:
       label: "➕ Custom Priority (If 'Other' selected)"
       placeholder: "e.g., 🟣 Critical Security Patch"
 
-  - type: checkboxes
-    id: standard_prerequisites
-    attributes:
-      label: "📋 Standard Requirements Checklist"
-      options:
-        - label: "Initial architecture review completed"
-        - label: "Backward compatibility verified"
-        - label: "Base documentation updated"
-
-  - type: textarea
+- type: textarea
     id: extra_requirements
     attributes:
       label: "🏗️ Additional & Custom Requirements"
-      description: "Add any other requirements or modify the ones above by typing them here."
-      placeholder: |
-        - [ ] New requirement 1
-        - [ ] Integration with specific API X
-        - [ ] Unit tests for module Y
+      description: "Define specific technical constraints and use styling to prioritize."
       value: |
+        ### 🧱 Core Infrastructure
         - [ ] 
-
+        
+        ### 🧪 Testing & Validation
+        > [!NOTE]
+        > *Ensure all tests follow the Bun:test suite.*
+        - [ ] 
+        
+        ---
+        ### 🚩 High Priority Features
+        **Focus on these first:**
+        - [ ] **Feature A:** `(Critical)`
+        - [ ] **Feature B:** _(High Impact)_
+        
+        ### 📂 Documentation
+        - [ ] Update `README.md`
+        - [ ] Notify @carlosPadillaTorres
+      placeholder: |
+        Use ### for headers and > [!TIP] for extra style...
   - type: textarea
     id: ideas_notes
     attributes:
