@@ -1,5 +1,5 @@
 name: "🚀 Flexible Feature Integration"
-description: "A fully customizable template where you can edit notes and add requirements."
+description: "A fully customizable template where you can edit notes, requirements, and attach files."
 title: "[FEATURE]: "
 labels: ["feature", "flexible-integration"]
 body:
@@ -10,20 +10,19 @@ body:
       description: "You can modify these notes if this specific task requires different instructions."
       value: |
         > [!IMPORTANT]
-        >  TEXT HERE
+        > In this feature, the most important task is the integration with Google Drive.
         
         > [!TIP]
-        > TEXT HERE
+        > Be as descriptive as possible.
         
         > [!NOTE]
-        > TEXT HERE
+        > Use this template for any new functionality.
         
         > [!WARNING]
-        > TEXT HERE
+        > Check for duplicates before starting.
         
         > [!CAUTION]
-        > TEXT HERE
-        
+        > No local FS persistence allowed.
     validations:
       required: true
 
@@ -43,10 +42,10 @@ body:
   - type: input
     id: custom_priority
     attributes:
-      label: "➕ Custom Priority (If 'Other' selected)"
+      label: "➕ Custom Priority (Optional)"
       placeholder: "e.g., 🟣 Critical Security Patch"
 
-- type: textarea
+  - type: textarea
     id: extra_requirements
     attributes:
       label: "🏗️ Additional & Custom Requirements"
@@ -64,15 +63,22 @@ body:
         ### 🚩 High Priority Features
         **Focus on these first:**
         - [ ] **Feature A:** `(Critical)`
-        - [ ] **Feature B:** _(High Impact)_
+        - [ ] 
         
         ### 📂 Documentation
         - [ ] Update `README.md`
         - [ ] Notify @carlosPadillaTorres
-      placeholder: |
-        Use ### for headers and > [!TIP] for extra style...
+      placeholder: "Use ### for headers and - [ ] for checkboxes..."
+
   - type: textarea
     id: ideas_notes
     attributes:
       label: "💡 Creative Space / Notes"
       description: "General notes or ideas for implementation."
+
+  - type: textarea
+    id: attachments
+    attributes:
+      label: "📎 Attachments & Evidence"
+      description: "Drag and drop your images, logs, or files here."
+      placeholder: "Drop files here..."
