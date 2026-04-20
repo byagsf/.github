@@ -1,0 +1,75 @@
+name: "Feature Proposal"
+description: "Propose a new feature or product improvement. Engineering tasks will be derived from this."
+title: "[Proposal]: "
+labels: ["feature", "proposal"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Feature Proposal
+        > Define what you want and why. Keep it focused on the problem and the desired outcome — implementation details belong in the engineering issues that will be created from this proposal.
+
+  - type: input
+    id: affected_area
+    attributes:
+      label: "Product Area"
+      description: "Which part of the product does this feature relate to?"
+      placeholder: "e.g., User Onboarding, Billing, Notifications, Dashboard"
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: "Context & Problem"
+      description: "What is the current situation and why is it a problem or an opportunity?"
+      placeholder: "Currently, users cannot... / There is no way to... / The team needs..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: "Proposed Feature"
+      description: "Describe what you want to build or change. Focus on the outcome, not the implementation."
+      placeholder: "We want to add / change / remove..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance_criteria
+    attributes:
+      label: "Acceptance Criteria"
+      description: "How do we know this feature is done and working correctly?"
+      value: |
+        - [ ] 
+        - [ ] 
+        - [ ] 
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: "Priority"
+      description: "How urgent or impactful is this feature?"
+      options:
+        - "High - Significant user or business impact"
+        - "Medium - Improves experience or workflow"
+        - "Low - Nice to have"
+    validations:
+      required: true
+
+  - type: textarea
+    id: references
+    attributes:
+      label: "References & Mockups"
+      description: "Links, screenshots, wireframes, or any supporting material."
+      placeholder: "Figma link, screenshot, related issue, external reference..."
+
+  - type: markdown
+    attributes:
+      value: |
+        ---
+        *Once approved, engineering tasks will be opened to cover the technical implementation of this proposal.*

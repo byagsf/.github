@@ -1,13 +1,13 @@
-name: "⚙️ Engineering / Architecture Task"
+name: "Engineering / Architecture Task"
 description: "Detailed technical task, architectural implementation, or backend feature."
 title: "[Develop]: "
 labels: ["engineering", "backend"]
-assignees: ''
+assignees: []
 body:
   - type: markdown
     attributes:
       value: |
-        ## ⚙️ Engineering Task
+        ## Engineering Task
         > Use this template for direct architectural implementations, database migrations, and backend resolutions. Please ensure the technical scope is clear and actionable.
 
   - type: input
@@ -15,7 +15,7 @@ body:
     attributes:
       label: "Target Module"
       description: "Which service or module does this task belong to?"
-      placeholder: "e.g., Lumina BE, Ephyra, Argos Ingest, ByaID"
+      placeholder: "e.g., Auth Service, API Gateway, Worker, Data Layer"
     validations:
       required: true
 
@@ -45,7 +45,7 @@ body:
   - type: checkboxes
     id: impact_checklist
     attributes:
-      label: "⚠️ Impact & Dependencies"
+      label: "Impact & Dependencies"
       description: "Check all that apply to ensure proper review and deployment."
       options:
         - label: "Requires database schema migrations"

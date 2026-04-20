@@ -1,0 +1,89 @@
+name: "Documentation & Contracts"
+description: "Request updates to API contracts, architecture diagrams, or technical knowledge base entries."
+title: "[Docs]: "
+labels: ["documentation", "contracts"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Documentation & Contracts
+        > Use this template to ensure technical knowledge is properly recorded and accessible. This includes API contract updates, architecture diagrams, onboarding guides, runbooks, and any other documentation that keeps the team aligned.
+
+  - type: input
+    id: affected_area
+    attributes:
+      label: "Affected Area"
+      description: "Which service, module, or knowledge base section needs to be documented or updated?"
+      placeholder: "e.g., Auth API contracts, System architecture diagram, Worker onboarding guide"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: doc_type
+    attributes:
+      label: "Documentation Type"
+      description: "What kind of documentation is needed?"
+      options:
+        - "API Contract - OpenAPI spec, endpoint definitions, request/response schema"
+        - "Architecture Diagram - System design, data flow, infrastructure map"
+        - "Runbook - Operational procedures, deployment steps, incident response"
+        - "Knowledge Base - Internal wiki, onboarding, team reference"
+        - "Code Documentation - Inline docs, README, module-level comments"
+        - "Decision Record (ADR) - Architectural or technical decision documentation"
+        - "Other"
+    validations:
+      required: true
+
+  - type: textarea
+    id: current_state
+    attributes:
+      label: "Current State"
+      description: "What is missing, outdated, or unclear in the existing documentation?"
+      placeholder: "The API contract for /auth/refresh does not reflect the new response schema added in v2.3... / There is no diagram showing how the worker communicates with the queue..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: requested_update
+    attributes:
+      label: "Requested Update"
+      description: "Describe exactly what needs to be written, updated, or created."
+      placeholder: |
+        - Update OpenAPI spec for POST /auth/refresh to include the new `refresh_token_exp` field
+        - Add sequence diagram showing the async job lifecycle
+        - Document the retry policy for failed webhook deliveries
+    validations:
+      required: true
+
+  - type: input
+    id: source_of_truth
+    attributes:
+      label: "Target Location"
+      description: "Where should this documentation live? Link to the file, Notion page, wiki, or repo."
+      placeholder: "e.g., /docs/api/auth.yaml, Notion > Engineering > Architecture, README.md"
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: "Context & References"
+      description: "Link to the PR, issue, or change that triggered this documentation need. Include any existing drafts or related material."
+      placeholder: "Related to #123 / Introduced in PR #456 / Existing draft at..."
+
+  - type: checkboxes
+    id: impact_checklist
+    attributes:
+      label: "Checklist"
+      options:
+        - label: "Existing documentation has been located and reviewed"
+        - label: "Changes are consistent with the current implementation"
+        - label: "Relevant team members have been notified or asked to review"
+        - label: "Knowledge base or wiki has been updated alongside this issue"
+
+  - type: markdown
+    attributes:
+      value: |
+        ---
+        *Note: Documentation issues should be closed only after the update has been reviewed and is accessible to the team.*

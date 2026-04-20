@@ -1,0 +1,111 @@
+name: "Performance & Optimization"
+description: "Report a performance bottleneck, latency issue, slow query, or resource scalability concern."
+title: "[Perf]: "
+labels: ["performance", "optimization"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Performance & Optimization
+        > Use this template for measurable performance problems: high latency, slow queries, memory pressure, or scalability limits. Include metrics whenever possible — gut feeling is not enough.
+
+  - type: input
+    id: affected_module
+    attributes:
+      label: "Affected Module / Service"
+      description: "Which service, endpoint, query, or component has the performance issue?"
+      placeholder: "e.g., /api/reports endpoint, User query JOIN, Worker queue, S3 upload handler"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: problem_type
+    attributes:
+      label: "Problem Type"
+      description: "What category best describes this issue?"
+      options:
+        - "High Latency - Slow response times"
+        - "Database - Slow or unoptimized queries"
+        - "Memory - Excessive memory usage or leaks"
+        - "CPU - High processing load"
+        - "Throughput - Low request or data processing capacity"
+        - "Scalability - System degrades under load"
+        - "Other"
+    validations:
+      required: true
+
+  - type: textarea
+    id: current_behavior
+    attributes:
+      label: "Current Behavior & Metrics"
+      description: "Describe the problem with concrete numbers. Include response times, query duration, memory usage, error rates, or any relevant metric."
+      placeholder: |
+        e.g., The /api/reports endpoint averages 4.2s under 50 concurrent users.
+        DB query takes ~800ms on a table with 2M rows.
+        Memory usage spikes to 1.8GB during nightly batch jobs.
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected_behavior
+    attributes:
+      label: "Expected Performance"
+      description: "What is the acceptable or target performance level?"
+      placeholder: |
+        e.g., Response time should be under 300ms for p95.
+        Query should complete in under 50ms with proper indexing.
+    validations:
+      required: true
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: "Environment & Conditions"
+      description: "Where was this measured? Include infrastructure details, dataset size, load conditions, and how to reproduce the degradation."
+      placeholder: |
+        Environment: Production / Staging
+        Infrastructure: 2x t3.medium, RDS PostgreSQL 15
+        Dataset: ~2M rows in users table
+        Reproduce: Run GET /api/reports with 50 concurrent requests
+    validations:
+      required: true
+
+  - type: textarea
+    id: hypothesis
+    attributes:
+      label: "Hypothesis / Root Cause"
+      description: "If you have a theory about the cause, describe it here. Include query plans, profiler output, or flame graphs if available."
+      placeholder: "Likely caused by a missing index on... / N+1 query pattern in... / No connection pooling configured..."
+
+  - type: textarea
+    id: proposed_solution
+    attributes:
+      label: "Proposed Solution (Optional)"
+      description: "If you have a concrete approach in mind, describe it."
+      placeholder: "Add a composite index on (user_id, created_at), cache results with TTL of 60s, enable query batching..."
+
+  - type: checkboxes
+    id: impact_checklist
+    attributes:
+      label: "Impact Scope"
+      description: "Check all areas affected by this performance issue."
+      options:
+        - label: "Affects end-user experience directly"
+        - label: "Impacts background jobs or scheduled tasks"
+        - label: "Requires database schema or index changes"
+        - label: "Requires infrastructure scaling or configuration changes"
+        - label: "Affects SLA or uptime commitments"
+
+  - type: textarea
+    id: attachments
+    attributes:
+      label: "Attachments & Evidence"
+      description: "Query execution plans, profiler traces, APM screenshots, logs, or benchmarks."
+      placeholder: "Drop files here or paste output..."
+
+  - type: markdown
+    attributes:
+      value: |
+        ---
+        *Note: Optimization work should be validated with before/after benchmarks before closing this issue.*
