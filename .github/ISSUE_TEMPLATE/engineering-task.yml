@@ -1,0 +1,60 @@
+name: "⚙️ Engineering / Architecture Task"
+description: "Detailed technical task, architectural implementation, or backend feature."
+title: "[Develop]: "
+labels: ["engineering", "backend"]
+assignees: ''
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## ⚙️ Engineering Task
+        > Use this template for direct architectural implementations, database migrations, and backend resolutions. Please ensure the technical scope is clear and actionable.
+
+  - type: input
+    id: target_module
+    attributes:
+      label: "Target Module"
+      description: "Which service or module does this task belong to?"
+      placeholder: "e.g., Lumina BE, Ephyra, Argos Ingest, ByaID"
+    validations:
+      required: true
+
+  - type: textarea
+    id: the_problem
+    attributes:
+      label: "The Problem"
+      description: "Describe the current technical limitation, architectural gap, or why this implementation is necessary for the system."
+      placeholder: "Currently, the system..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: required_resolutions
+    attributes:
+      label: "Required Resolutions"
+      description: "Provide the exact, actionable steps required to solve the problem."
+      value: |
+        **1. [Resolution Step Name]**
+        * [Actionable implementation detail, schema change, or endpoint structure]
+
+        **2. [Resolution Step Name]**
+        * [Actionable implementation detail]
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: impact_checklist
+    attributes:
+      label: "⚠️ Impact & Dependencies"
+      description: "Check all that apply to ensure proper review and deployment."
+      options:
+        - label: "Requires database schema migrations"
+        - label: "Alters existing API contracts"
+        - label: "Requires infrastructure or cloud gateway updates"
+        - label: "Introduces new third-party dependencies"
+
+  - type: markdown
+    attributes:
+      value: |
+        ---
+        *Note: Ensure all dependencies and external API impacts are considered before marking this task as complete.*
