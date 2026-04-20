@@ -93,4 +93,3 @@ body:
     attributes:
       label: "Extras"
       description: "add extra information if needed"
-      placeholder: ""
