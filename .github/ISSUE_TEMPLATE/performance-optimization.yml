@@ -109,3 +109,10 @@ body:
       value: |
         ---
         *Note: Optimization work should be validated with before/after benchmarks before closing this issue.*
+
+  - type: textarea
+    id: extras
+    attributes:
+      label: "Extras"
+      description: "add extra information if needed"
+      placeholder: ""

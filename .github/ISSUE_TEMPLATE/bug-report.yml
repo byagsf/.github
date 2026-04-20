@@ -92,3 +92,10 @@ body:
       value: |
         ---
         *Note: Before submitting, verify the bug is reproducible and has not been reported already.*
+
+  - type: textarea
+    id: extras
+    attributes:
+      label: "Extras"
+      description: "add extra information if needed"
+      placeholder: ""

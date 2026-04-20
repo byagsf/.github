@@ -58,3 +58,10 @@ body:
       value: |
         ---
         *Note: Ensure all dependencies and external API impacts are considered before marking this task as complete.*
+
+  - type: textarea
+    id: extras
+    attributes:
+      label: "Extras"
+      description: "add extra information if needed"
+      placeholder: ""

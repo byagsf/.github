@@ -73,3 +73,10 @@ body:
       value: |
         ---
         *Once approved, engineering tasks will be opened to cover the technical implementation of this proposal.*
+
+  - type: textarea
+    id: extras
+    attributes:
+      label: "Extras"
+      description: "add extra information if needed"
+      placeholder: ""

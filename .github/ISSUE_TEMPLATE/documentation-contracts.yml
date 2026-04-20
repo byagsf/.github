@@ -87,3 +87,10 @@ body:
       value: |
         ---
         *Note: Documentation issues should be closed only after the update has been reviewed and is accessible to the team.*
+
+  - type: textarea
+    id: extras
+    attributes:
+      label: "Extras"
+      description: "add extra information if needed"
+      placeholder: ""
