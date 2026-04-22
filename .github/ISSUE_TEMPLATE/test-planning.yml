@@ -1,0 +1,79 @@
+name: "📋 Planeación de Pruebas (Test Planning)"
+description: "Registra el inicio de la fase de pruebas y la estrategia a seguir para un nuevo requerimiento."
+title: "[QA Planning]: "
+labels: ["qa", "planning"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Estrategia de Inicio de QA
+        Este issue formaliza el inicio de la revisión de funcionalidad. Antes de ejecutar, debemos asegurar que el alcance y los recursos están claros.
+
+  - type: input
+    id: pr_link
+    attributes:
+      label: "Pull Request / Documentación de Requerimientos"
+      description: "Enlace al documento de desarrollo o al documento de especificaciones funcional."
+      placeholder: "https://github.com/usuario/repo/.docs/..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: scope
+    attributes:
+      label: "Alcance de la Prueba (Scope)"
+      description: "¿Qué se va a probar? Define el primer alcance (durante el desarrollo de los test se podrá ajustar en los comentarios de este issuse)."
+      placeholder: "e.g., Validación de cálculos de la NOM-035, Flujo de login con nuevos roles..."
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: "Prioridad de QA"
+      description: "¿Qué tan urgente es liberar esto?"
+      options:
+        - "P0 - Bloqueante / Hotfix"
+        - "P1 - Alta (Nueva funcionalidad core)"
+        - "P2 - Media (Mejora o cambio menor)"
+        - "P3 - Baja (Cosmético / Refactor)"
+    validations:
+      required: true
+
+  - type: textarea
+    id: technical_readiness
+    attributes:
+      label: "Requisitos Técnicos y Accesos"
+      description: "¿Tienes todo para empezar? (BD, Endpoints, Variables de entorno, Docker images)."
+      value: |
+        - [ ] Entorno de desarrollo listo
+        - [ ] Documentación de API (Bruno)
+        - [ ] Variables de entorno configuradas
+        - [ ] Documentación técnica general (historias de usuario, flujos, arquitectura)
+    validations:
+      required: true
+
+  - type: textarea
+    id: test_strategy
+    attributes:
+      label: "Enfoque de Pruebas"
+      description: "¿Cómo piensas abordarlo?"
+      value: |
+        - [ ] Pruebas Unitarias 
+        - [ ] Pruebas de Integración / API
+        - [ ] E2E Automation (Playwright)
+        - [ ] Pruebas Manuales (Exploratorias)
+
+  - type: input
+    id: estimated_date
+    attributes:
+      label: "Fecha Estimada de Finalización"
+      description: "Cuándo planeas tener listo el reporte de ejecución."
+      placeholder: "DD/MM/YYYY"
+
+  - type: textarea
+    id: risks
+    attributes:
+      label: "Riesgos Identificados"
+      description: "Cualquier cosa que pueda retrasar el QA (e.g., 'El ambiente de staging es inestable')."
