@@ -41,18 +41,16 @@ body:
     validations:
       required: true
 
-  - type: textarea
-    id: technical_readiness
+  - type: checkboxes
+    id: technical_requirement_checklist
     attributes:
       label: "Technical Requirements and Access"
       description: "Do you have everything to start? (DB, Endpoints, Environment variables, Docker images)."
-      value: |
-        - [ ] Development environment ready
-        - [ ] API Documentation (Bruno)
-        - [ ] Environment variables configured
-        - [ ] General technical documentation (user stories, flows, architecture)
-    validations:
-      required: true
+      options:
+        - label: "Development environment ready"
+        - label: "API Documentation (Bruno)"
+        - label: "Environment variables configured"
+        - label: "General technical documentation (user stories, flows, architecture)"
 
   - type: textarea
     id: test_strategy
