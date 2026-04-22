@@ -76,4 +76,4 @@ body:
     id: risks
     attributes:
       label: "Identified Risks"
-      description: "Anything that might delay QA (e.g., 'The staging environment is unstable').
+      description: "Anything that might delay QA (e.g., 'The staging environment is unstable')."
