@@ -1,5 +1,5 @@
-name: "🧪 Ejecución de Tests"
-description: "Registra el resultado de la ejecución de pruebas manuales o automatizadas."
+name: "🧪 Test Execution"
+description: "Record the results of manual or automated test executions."
 title: "[TEST]: "
 labels: ["qa", "test-execution"]
 assignees: []
@@ -7,35 +7,35 @@ body:
   - type: markdown
     attributes:
       value: |
-        ## Reporte de Ejecución de Pruebas
-        Utilice esta plantilla para documentar los resultados de los casos de prueba definidos en el `TEST_PLAN.md`.
+        ## Test Execution Report
+        Use this template to document the results of the test cases defined in the `TEST_PLAN.md`.
 
   - type: input
     id: test_plan_link
     attributes:
-      label: "Enlace al Test Plan / Casos de Prueba"
-      description: "URL directa al archivo .md o sección específica en el repositorio."
-      placeholder: "e.g., https://github.com/usuario/repo/blob/main/docs/TEST_PLAN.md"
+      label: "Test Plan / Test Cases Link"
+      description: "Direct URL to the .md file or specific section in the repository."
+      placeholder: "e.g., https://github.com/user/repo/blob/main/docs/TEST_PLAN.md"
     validations:
       required: true
 
   - type: dropdown
     id: test_type
     attributes:
-      label: "Tipo de Prueba"
+      label: "Test Type"
       options:
-        - "Manual - Ejecución paso a paso"
+        - "Manual - Step-by-step execution"
         - "Automated - Scripting (Playwright/Vitest/TestSprite)"
-        - "Regression - Verificación de cambios"
-        - "Smoke Test - Verificación crítica inicial"
+        - "Regression - Change verification"
+        - "Smoke Test - Initial critical verification"
     validations:
       required: true
 
   - type: input
     id: environment
     attributes:
-      label: "Ambiente / Entorno"
-      description: "Especifica la rama, versión de Docker o URL del ambiente."
+      label: "Environment"
+      description: "Specify the branch, Docker version, or environment URL."
       placeholder: "e.g., branch: develop, env: staging, Bun v1.1"
     validations:
       required: true
@@ -43,29 +43,29 @@ body:
   - type: textarea
     id: test_cases_checklist
     attributes:
-      label: "Checklist de Casos Ejecutados"
-      description: "Lista los IDs de los casos de prueba (TC-XX) y su resultado rápido."
+      label: "Executed Test Cases Checklist"
+      description: "List the IDs of the test cases (TC-XX) and their quick result."
       value: |
-        - [ ] TC-01: [Nombre del caso] - PASSED
-        - [ ] TC-02: [Nombre del caso] - FAILED
-        - [ ] TC-03: [Nombre del caso] - SKIPPED
+        - [ ] TC-01: [Test case name] - PASSED
+        - [ ] TC-02: [Test case name] - FAILED
+        - [ ] TC-03: [Test case name] - SKIPPED
     validations:
       required: true
 
   - type: dropdown
     id: final_verdict
     attributes:
-      label: "Veredicto Final"
-      description: "¿La funcionalidad es estable para pasar a producción?"
+      label: "Final Verdict"
+      description: "Is the functionality stable to move to production?"
       options:
-        - "🟢 PASS - Todo funciona según lo esperado"
-        - "🟡 PASS WITH ISSUES - Fallos menores no bloqueantes"
-        - "🔴 FAIL - Fallos críticos detectados"
-        - "⚪ BLOCKED - No se pudo completar la prueba"
+        - "🟢 PASS - Everything works as expected"
+        - "🟡 PASS WITH ISSUES - Minor non-blocking issues"
+        - "🔴 FAIL - Critical issues detected"
+        - "⚪ BLOCKED - Testing could not be completed"
     validations:
       required: true
 
   - type: textarea
     id: bugs_found
     attributes:
-      label: "Bugs Detectados"
+      label: "Detected Bugs"

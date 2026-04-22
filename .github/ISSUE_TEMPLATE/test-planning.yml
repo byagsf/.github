@@ -1,5 +1,5 @@
-name: "📋 Planeación de Pruebas (Test Planning)"
-description: "Registra el inicio de la fase de pruebas y la estrategia a seguir para un nuevo requerimiento."
+name: "📋 Test Planning"
+description: "Record the start of the testing phase and the strategy to follow for a new requirement."
 title: "[QA Planning]: "
 labels: ["qa", "planning"]
 assignees: []
@@ -7,73 +7,73 @@ body:
   - type: markdown
     attributes:
       value: |
-        ## Estrategia de Inicio de QA
-        Este issue formaliza el inicio de la revisión de funcionalidad. Antes de ejecutar, debemos asegurar que el alcance y los recursos están claros.
+        ## QA Start Strategy
+        This issue formalizes the start of the functionality review. Before executing, we must ensure that the scope and resources are clear.
 
   - type: input
     id: pr_link
     attributes:
-      label: "Pull Request / Documentación de Requerimientos"
-      description: "Enlace al documento de desarrollo o al documento de especificaciones funcional."
-      placeholder: "https://github.com/usuario/repo/.docs/..."
+      label: "Pull Request / Requirements Documentation"
+      description: "Link to the development document or functional specifications document."
+      placeholder: "https://github.com/user/repo/.docs/..."
     validations:
       required: true
 
   - type: textarea
     id: scope
     attributes:
-      label: "Alcance de la Prueba (Scope)"
-      description: "¿Qué se va a probar? Define el primer alcance (durante el desarrollo de los test se podrá ajustar en los comentarios de este issuse)."
-      placeholder: "e.g., Validación de cálculos de la NOM-035, Flujo de login con nuevos roles..."
+      label: "Test Scope"
+      description: "What will be tested? Define the initial scope (during the test development, it can be adjusted in the comments of this issue)."
+      placeholder: "e.g., Validation of NOM-035 calculations, Login flow with new roles..."
     validations:
       required: true
 
   - type: dropdown
     id: priority
     attributes:
-      label: "Prioridad de QA"
-      description: "¿Qué tan urgente es liberar esto?"
+      label: "QA Priority"
+      description: "How urgent is it to release this?"
       options:
-        - "P0 - Bloqueante / Hotfix"
-        - "P1 - Alta (Nueva funcionalidad core)"
-        - "P2 - Media (Mejora o cambio menor)"
-        - "P3 - Baja (Cosmético / Refactor)"
+        - "P0 - Blocking / Hotfix"
+        - "P1 - High (New core functionality)"
+        - "P2 - Medium (Minor improvement or change)"
+        - "P3 - Low (Cosmetic / Refactor)"
     validations:
       required: true
 
   - type: textarea
     id: technical_readiness
     attributes:
-      label: "Requisitos Técnicos y Accesos"
-      description: "¿Tienes todo para empezar? (BD, Endpoints, Variables de entorno, Docker images)."
+      label: "Technical Requirements and Access"
+      description: "Do you have everything to start? (DB, Endpoints, Environment variables, Docker images)."
       value: |
-        - [ ] Entorno de desarrollo listo
-        - [ ] Documentación de API (Bruno)
-        - [ ] Variables de entorno configuradas
-        - [ ] Documentación técnica general (historias de usuario, flujos, arquitectura)
+        - [ ] Development environment ready
+        - [ ] API Documentation (Bruno)
+        - [ ] Environment variables configured
+        - [ ] General technical documentation (user stories, flows, architecture)
     validations:
       required: true
 
   - type: textarea
     id: test_strategy
     attributes:
-      label: "Enfoque de Pruebas"
-      description: "¿Cómo piensas abordarlo?"
+      label: "Test Approach"
+      description: "How do you plan to approach it?"
       value: |
-        - [ ] Pruebas Unitarias 
-        - [ ] Pruebas de Integración / API
+        - [ ] Unit Tests 
+        - [ ] Integration / API Tests
         - [ ] E2E Automation (Playwright)
-        - [ ] Pruebas Manuales (Exploratorias)
+        - [ ] Manual Tests (Exploratory)
 
   - type: input
     id: estimated_date
     attributes:
-      label: "Fecha Estimada de Finalización"
-      description: "Cuándo planeas tener listo el reporte de ejecución."
+      label: "Estimated Completion Date"
+      description: "When do you plan to have the execution report ready."
       placeholder: "DD/MM/YYYY"
 
   - type: textarea
     id: risks
     attributes:
-      label: "Riesgos Identificados"
-      description: "Cualquier cosa que pueda retrasar el QA (e.g., 'El ambiente de staging es inestable')."
+      label: "Identified Risks"
+      description: "Anything that might delay QA (e.g., 'The staging environment is unstable').
